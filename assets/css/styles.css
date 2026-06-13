@@ -18,6 +18,13 @@ html {
   scroll-behavior: smooth;
 }
 
+#products,
+#technology,
+#backers,
+#press {
+  scroll-margin-top: 110px;
+}
+
 body {
   margin: 0;
   background: var(--bg);
