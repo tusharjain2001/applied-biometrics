@@ -133,3 +133,21 @@ document.querySelectorAll(".carousel-arrow").forEach((button) => {
     nextSlide(target);
   });
 });
+
+const navToggle = document.querySelector(".nav-toggle");
+const mainNav = document.querySelector(".main-nav");
+
+if (navToggle && mainNav) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!isOpen));
+    mainNav.classList.toggle("is-open", !isOpen);
+  });
+
+  mainNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navToggle.setAttribute("aria-expanded", "false");
+      mainNav.classList.remove("is-open");
+    });
+  });
+}
