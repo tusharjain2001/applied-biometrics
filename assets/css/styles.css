@@ -1155,10 +1155,29 @@ textarea {
   .press-card-compact,
   .press-card-rice,
   .press-card-sxsw {
-    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) 132px;
     gap: 22px;
+    align-items: center;
     justify-items: start;
     text-align: left;
+  }
+
+  .press-card-compact img,
+  .press-card-rice img,
+  .press-card-sxsw img {
+    justify-self: center;
+  }
+
+  .press-card-compact .press-title,
+  .press-card-rice .press-title,
+  .press-card-sxsw .press-title {
+    font-size: 18px;
+  }
+
+  .press-card-compact .press-date,
+  .press-card-rice .press-date,
+  .press-card-sxsw .press-date {
+    font-size: 18px;
   }
 
   .site-footer {
