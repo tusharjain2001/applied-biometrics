@@ -753,6 +753,74 @@ textarea {
   }
 }
 
+@media (min-width: 861px) and (max-width: 1024px) {
+  .main-content {
+    width: min(100% - 40px, 100%);
+  }
+
+  .press-rows {
+    gap: 26px;
+  }
+
+  .press-card-wide {
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .press-card-reverse {
+    grid-template-columns: minmax(0, 1fr) 160px;
+    gap: 20px;
+  }
+
+  .press-row-two-up {
+    gap: 36px;
+  }
+
+  .press-card-compact {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) 140px;
+    gap: 16px;
+  }
+
+  .press-card-compact .press-copy {
+    max-width: none;
+  }
+
+  .press-card-compact .press-title,
+  .press-card-compact .press-date {
+    font-size: 16px;
+  }
+
+  .press-card-rice {
+    grid-template-columns: minmax(0, 1fr) 150px;
+  }
+
+  .press-card-sxsw {
+    grid-template-columns: 1fr 180px;
+    gap: 16px;
+  }
+
+  .press-logo-verge {
+    max-width: 120px;
+  }
+
+  .press-logo-startup {
+    max-width: 130px;
+  }
+
+  .press-logo-adma {
+    max-width: 150px;
+  }
+
+  .press-logo.press-logo-rice {
+    max-width: 140px;
+  }
+
+  .press-logo-sxsw {
+    max-width: 170px;
+  }
+}
+
 @media (max-width: 860px) {
   #products,
   #technology,
