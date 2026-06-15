@@ -881,6 +881,28 @@ textarea {
     aspect-ratio: 16 / 9;
     height: auto;
   }
+
+  .site-footer {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    justify-items: start;
+    gap: 8px;
+  }
+
+  .footer-copy p:first-child {
+    white-space: nowrap;
+  }
+
+  .footer-center {
+    justify-content: flex-start;
+  }
 }
 
 @media (min-width: 861px) and (max-width: 1024px) {
@@ -1255,6 +1277,7 @@ textarea {
     grid-template-columns: 1fr;
     justify-items: start;
     gap: 14px;
+    padding-left: 0;
   }
 
   .footer-center {
@@ -1264,6 +1287,14 @@ textarea {
   .footer-top {
     right: 14px;
     bottom: 26px;
+  }
+
+  .site-footer {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -1527,6 +1558,12 @@ textarea {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .footer-content {
+    padding-left: 0;
   }
 
   .footer-copy p {
