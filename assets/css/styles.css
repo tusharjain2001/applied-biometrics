@@ -893,7 +893,7 @@ textarea {
   .press-card-compact .press-date,
   .press-card-sxsw .press-title,
   .press-card-sxsw .press-date {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .press-card-rice {
@@ -1075,6 +1075,16 @@ textarea {
     padding-top: 0;
   }
 
+  .press-rows {
+    gap: 24px;
+  }
+
+  .press-row,
+  .press-row-two-up,
+  .press-row-centered {
+    display: contents;
+  }
+
   .press-row-two-up {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -1134,31 +1144,54 @@ textarea {
   .press-card-rice,
   .press-card-sxsw,
   .press-card-reverse {
-    grid-template-columns: minmax(96px, 120px) minmax(0, 1fr);
+    grid-template-columns: 120px minmax(0, 1fr);
     gap: 16px;
     align-items: center;
     justify-items: start;
     text-align: left;
+    min-height: 96px;
+    margin: 0;
+    padding: 0;
   }
 
   .press-card > :not(.press-copy) {
     order: 1;
     width: 100%;
     justify-self: start;
+    align-self: center;
+  }
+
+  .press-card > a:not(.press-copy) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .press-card > a:not(.press-copy) img {
+    width: 100%;
+  }
+
+  .press-card > img {
+    align-self: center;
   }
 
   .press-card .press-copy {
     order: 2;
     max-width: none;
+    align-self: center;
   }
 
+  .press-card-compact .press-title,
+  .press-card-rice .press-title,
   .press-card-sxsw .press-title {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.35;
   }
 
+  .press-card-compact .press-date,
+  .press-card-rice .press-date,
   .press-card-sxsw .press-date {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.2;
     margin-top: 10px;
   }
@@ -1166,6 +1199,10 @@ textarea {
   .press-logo {
     max-width: 120px;
     justify-self: start;
+  }
+
+  .press-card-rice .press-logo.press-logo-rice {
+    transform: none;
   }
 
   .footer-content {
@@ -1402,17 +1439,23 @@ textarea {
   .press-card-center,
   .press-card-rice,
   .press-card-sxsw {
-    grid-template-columns: minmax(84px, 104px) minmax(0, 1fr);
+    grid-template-columns: 104px minmax(0, 1fr);
     gap: 14px;
+    min-height: 82px;
   }
 
   .press-card-reverse {
-    grid-template-columns: minmax(84px, 104px) minmax(0, 1fr);
+    grid-template-columns: 104px minmax(0, 1fr);
     gap: 14px;
+    min-height: 82px;
   }
 
   .press-logo {
     max-width: 104px;
+  }
+
+  .press-card-rice .press-logo.press-logo-rice {
+    transform: none;
   }
 
   .press-card-compact .press-title,
