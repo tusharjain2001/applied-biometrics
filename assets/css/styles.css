@@ -153,7 +153,16 @@ textarea {
   letter-spacing: -0.02em;
 }
 
-.hero-copy h1 span {
+.hero-copy h1 .hero-line-desktop {
+  color: inherit;
+}
+
+.hero-copy h1 .hero-line-mobile {
+  display: none;
+  color: inherit;
+}
+
+.hero-copy h1 .hero-highlight {
   color: #04ac1c;
 }
 
@@ -609,6 +618,14 @@ textarea {
   color: #111111;
 }
 
+.press-title a,
+.press-date a {
+  color: inherit;
+  text-decoration: none;
+  font: inherit;
+  line-height: inherit;
+}
+
 .press-date {
   margin-top: 8px;
   font-size: 24px;
@@ -887,7 +904,9 @@ textarea {
   }
 
   .press-card-compact .press-title,
-  .press-card-compact .press-date {
+  .press-card-compact .press-date,
+  .press-card-sxsw .press-title,
+  .press-card-sxsw .press-date {
     font-size: 16px;
   }
 
@@ -922,6 +941,14 @@ textarea {
 }
 
 @media (max-width: 860px) {
+  .hero-copy h1 .hero-line-desktop {
+    display: none;
+  }
+
+  .hero-copy h1 .hero-line-mobile {
+    display: inline;
+  }
+
   #products,
   #technology,
   #backers,
@@ -1141,6 +1168,17 @@ textarea {
     max-width: none;
   }
 
+  .press-card-sxsw .press-title {
+    font-size: 24px;
+    line-height: 1.35;
+  }
+
+  .press-card-sxsw .press-date {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+
   .press-logo {
     max-width: 120px;
     justify-self: start;
@@ -1163,6 +1201,14 @@ textarea {
 }
 
 @media (max-width: 680px) {
+  .hero-copy h1 .hero-line-desktop {
+    display: none;
+  }
+
+  .hero-copy h1 .hero-line-mobile {
+    display: inline;
+  }
+
   .product-section,
   .product-section.reverse {
     grid-template-columns: 1fr;
@@ -1243,6 +1289,14 @@ textarea {
 
   .hero-copy h1 {
     font-size: 38px;
+  }
+
+  .hero-copy h1 .hero-line-desktop {
+    display: none;
+  }
+
+  .hero-copy h1 .hero-line-mobile {
+    display: inline;
   }
 
   .hero-copy p,
