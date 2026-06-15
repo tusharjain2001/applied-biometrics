@@ -385,7 +385,7 @@ textarea {
 }
 
 .backers-section {
-  padding: 92px 0 24px;
+  padding: 92px clamp(24px, 4vw, 48px) 24px;
 }
 
 .backers-section h2 {
@@ -398,29 +398,35 @@ textarea {
 .backers-rows-grid {
   display: grid;
   gap: 0;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .backers-grid {
   display: grid;
-  grid-template-columns: repeat(4, max-content);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
-  justify-content: center;
+  justify-content: stretch;
+  justify-items: center;
   gap: 18px 42px;
 }
 
 .backers-grid-three {
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .backers-grid-two {
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .backers-logo-card {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
   min-height: 182px;
+  padding-inline: 10px;
 }
 
 .backers-logo {
