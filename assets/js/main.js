@@ -27,7 +27,7 @@ const carousels = {
     dotsId: "btr-dots",
     images: [
       {
-        src: "assets/images/carousels/btr/plain-jutin.jpg",
+        src: "assets/images/carousels/btr/plain-jutin.png",
         alt: "BTR Board product image 1",
       },
       {
