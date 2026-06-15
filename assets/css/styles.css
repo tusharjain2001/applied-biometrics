@@ -478,6 +478,11 @@ textarea {
   max-height: 84px;
 }
 
+.backers-logo-snocap {
+  width: min(100%, 260px);
+  max-height: none;
+}
+
 .press-section {
   padding: 96px 0 40px;
 }
@@ -825,7 +830,8 @@ textarea {
   .backers-logo-diagle,
   .backers-logo-ascend,
   .backers-logo-4ward,
-  .backers-logo-rga {
+  .backers-logo-rga,
+  .backers-logo-snocap {
     max-width: 100%;
   }
 
@@ -1133,8 +1139,14 @@ textarea {
   .backers-logo-diagle,
   .backers-logo-ascend,
   .backers-logo-4ward,
-  .backers-logo-rga {
+  .backers-logo-rga,
+  .backers-logo-snocap {
     max-height: 86px;
+  }
+
+  .backers-logo-snocap {
+    width: min(100%, 240px);
+    max-height: none;
   }
 
   .press-card,
@@ -1415,8 +1427,14 @@ textarea {
   .backers-logo-diagle,
   .backers-logo-ascend,
   .backers-logo-4ward,
-  .backers-logo-rga {
+  .backers-logo-rga,
+  .backers-logo-snocap {
     max-height: 64px;
+  }
+
+  .backers-logo-snocap {
+    width: min(100%, 200px);
+    max-height: none;
   }
 
   .press-section {
