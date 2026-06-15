@@ -927,14 +927,6 @@ textarea {
 }
 
 @media (max-width: 860px) {
-  .hero-copy h1 .hero-line-desktop {
-    display: none;
-  }
-
-  .hero-copy h1 .hero-line-mobile {
-    display: inline;
-  }
-
   #products,
   #technology,
   #backers,
@@ -1001,8 +993,8 @@ textarea {
   }
 
   .hero-copy h1 {
-    max-width: none;
-    font-size: 48px;
+    max-width: 100%;
+    font-size: clamp(38px, 5.6vw, 46px);
     line-height: 1.08;
   }
 
@@ -1193,14 +1185,6 @@ textarea {
 }
 
 @media (max-width: 680px) {
-  .hero-copy h1 .hero-line-desktop {
-    display: none;
-  }
-
-  .hero-copy h1 .hero-line-mobile {
-    display: inline;
-  }
-
   .product-section,
   .product-section.reverse {
     grid-template-columns: 1fr;
