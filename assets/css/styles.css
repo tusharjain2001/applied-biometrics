@@ -178,6 +178,9 @@ textarea {
 .product-section {
   display: grid;
   grid-template-columns: minmax(520px, 1fr) 500px;
+  grid-template-areas:
+    "intro carousel"
+    "features carousel";
   gap: 80px;
   align-items: start;
   padding: 20px 0 54px;
@@ -189,14 +192,34 @@ textarea {
 
 .product-section.reverse {
   grid-template-columns: 500px minmax(520px, 1fr);
+  grid-template-areas:
+    "carousel intro"
+    "carousel features";
 }
 
-.product-copy {
+.product-copy,
+.product-features {
   max-width: 520px;
 }
 
-.product-section.reverse .product-copy {
+.product-intro {
+  grid-area: intro;
+}
+
+.product-features {
+  grid-area: features;
+}
+
+.carousel-block {
+  grid-area: carousel;
+}
+
+.product-section.reverse .product-intro {
   margin-top: 48px;
+}
+
+.product-section.reverse .carousel-block {
+  margin-top: 128px;
 }
 
 .product-copy h2 {
@@ -227,7 +250,7 @@ textarea {
   display: grid;
   justify-items: center;
   gap: 10px;
-  margin-top: 28px;
+  margin-top: 72px;
 }
 
 .carousel-frame {
@@ -693,8 +716,8 @@ textarea {
   }
 
   .hero-copy h1 {
-    max-width: 760px;
-    font-size: clamp(48px, 7vw, 64px);
+    max-width: 860px;
+    font-size: clamp(44px, 5.4vw, 60px);
   }
 
   .hero-copy p {
@@ -703,11 +726,17 @@ textarea {
 
   .product-section {
     grid-template-columns: minmax(0, 1fr) minmax(320px, 38vw);
+    grid-template-areas:
+      "intro carousel"
+      "features carousel";
     gap: 32px;
   }
 
   .product-section.reverse {
     grid-template-columns: minmax(320px, 38vw) minmax(0, 1fr);
+    grid-template-areas:
+      "carousel intro"
+      "carousel features";
   }
 
   .carousel-block {
@@ -717,16 +746,19 @@ textarea {
 
   .product-section .carousel-block {
     justify-self: end;
+    margin-top: 84px;
     padding-right: 18px;
   }
 
   .product-section.reverse .carousel-block {
     justify-self: start;
+    margin-top: 140px;
     padding-right: 0;
     padding-left: 18px;
   }
 
-  .product-copy {
+  .product-copy,
+  .product-features {
     max-width: 100%;
   }
 
@@ -909,8 +941,6 @@ textarea {
     gap: 14px;
   }
 
-  .product-section,
-  .product-section.reverse,
   .technology-layout {
     grid-template-columns: 1fr;
   }
@@ -972,24 +1002,62 @@ textarea {
   }
 
   .product-section {
-    gap: 28px;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 38vw);
+    grid-template-areas:
+      "intro carousel"
+      "features carousel";
+    gap: 20px;
     padding-bottom: 44px;
   }
 
-  .product-section.reverse .product-copy,
-  .carousel-block,
-  .product-section.reverse .carousel-block {
-    margin-top: 0;
+  .product-section.reverse {
+    grid-template-columns: minmax(220px, 38vw) minmax(0, 1fr);
+    grid-template-areas:
+      "carousel intro"
+      "carousel features";
+  }
+
+  .product-copy h2 {
+    font-size: 40px;
+  }
+
+  .product-copy > p,
+  .feature-block p {
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  .feature-block {
+    margin-top: 32px;
+  }
+
+  .feature-block h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .carousel-block {
+    max-width: 320px;
+    margin-top: 40px;
     padding-left: 0;
     padding-right: 0;
   }
 
-  .product-section.reverse .carousel-block {
-    order: 2;
+  .product-section .carousel-block {
+    justify-self: end;
+    margin-top: 52px;
   }
 
-  .product-section.reverse .product-copy {
-    order: 1;
+  .product-section.reverse .carousel-block {
+    justify-self: start;
+    margin-top: 116px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .carousel-frame {
+    width: min(100%, 320px);
+    height: auto;
   }
 
   .technology-copy {
@@ -999,6 +1067,10 @@ textarea {
   .press-row-two-up {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .press-row-centered {
+    justify-items: start;
   }
 
   .backers-rows-grid {
@@ -1044,16 +1116,6 @@ textarea {
     max-height: 86px;
   }
 
-  .carousel-frame {
-    width: min(100%, 500px);
-    height: auto;
-  }
-
-  .carousel-frame img {
-    aspect-ratio: 1 / 1;
-    height: auto;
-  }
-
   .press-card,
   .press-card-wide,
   .press-card-compact,
@@ -1097,6 +1159,44 @@ textarea {
   .footer-top {
     right: 14px;
     bottom: 26px;
+  }
+}
+
+@media (max-width: 680px) {
+  .product-section,
+  .product-section.reverse {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "carousel"
+      "features";
+    gap: 28px;
+  }
+
+  .product-section.reverse .product-intro {
+    margin-top: 0;
+  }
+
+  .carousel-block,
+  .product-section.reverse .carousel-block {
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .product-section .carousel-block,
+  .product-section.reverse .carousel-block {
+    justify-self: center;
+  }
+
+  .carousel-frame {
+    width: min(100%, 500px);
+    height: auto;
+  }
+
+  .carousel-frame img {
+    aspect-ratio: 1 / 1;
+    height: auto;
   }
 }
 
