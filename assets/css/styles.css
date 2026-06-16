@@ -560,6 +560,11 @@ textarea {
   gap: 28px;
 }
 
+.press-card-compact.press-card-sxsw {
+  width: fit-content;
+  max-width: 100%;
+}
+
 .press-card-compact .press-copy {
   max-width: 240px;
 }
@@ -629,10 +634,15 @@ textarea {
 
 .press-title a,
 .press-date a {
+  display: inline-block;
   color: inherit;
   text-decoration: none;
-  font: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
   line-height: inherit;
+  letter-spacing: inherit;
 }
 
 .press-date {
