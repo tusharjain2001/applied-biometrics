@@ -921,6 +921,10 @@ textarea {
     gap: 8px;
   }
 
+  .footer-copy p {
+    font-size: 20px;
+  }
+
   .footer-copy p:first-child {
     white-space: nowrap;
   }
@@ -1599,7 +1603,7 @@ textarea {
   }
 
   .footer-copy p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .footer-contact {
